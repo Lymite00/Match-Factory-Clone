@@ -233,6 +233,8 @@ MonoBehaviour:
   itemSpotsParent: {fileID: 207703392}
   itemLocalPositionOnSpot: {x: 0, y: 0.09, z: 0}
   itemLocalScaleOnSpot: {x: 0.16, y: 0.16, z: 0.16}
+  animationDuration: 0.15
+  animationEasing: 7
 --- !u!1001 &202469025
 PrefabInstance:
   m_ObjectHideFlags: 0

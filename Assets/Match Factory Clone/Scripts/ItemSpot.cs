@@ -2,20 +2,33 @@ using UnityEngine;
 
 public class ItemSpot : MonoBehaviour
 {
-    [Header("Settings")] 
-    private Item _item;
-    public Item Item => _item;
+    [Header(" Elements ")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform itemParent;
+
+    [Header(" Settings ")]
+    private Item item;
+    public Item Item => item;
 
     public void Populate(Item item)
     {
-        this._item = item;
-        item.transform.SetParent(transform);
+        this.item = item;
         item.AssignSpot(this);
+        item.transform.SetParent(itemParent);
     }
-    public bool IsEmpty() =>_item == null;
+
+    public void BumpDown()
+    {
+        animator.Play("Bump", 0, 0);
+    }
 
     public void Clear()
     {
-        _item = null;
+        item = null;
+    }
+
+    public bool IsEmpty()
+    {
+        return item == null;
     }
 }
