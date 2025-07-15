@@ -5,6 +5,12 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Rigidbody))]
 public class Item : MonoBehaviour
 {
+    [Header("Data")]
+    [SerializeField] private EItemName itemName;
+    public EItemName ItemName => itemName;
+    private ItemSpot spot;
+    public ItemSpot Spot => spot;
+    
     [Header("Elements")] 
     public Renderer _renderer;
     public Collider _collider;
@@ -16,6 +22,8 @@ public class Item : MonoBehaviour
         baseMaterial = _renderer.material;
         _collider = GetComponentInChildren<Collider>();
     }
+
+    public void AssignSpot(ItemSpot spot) => this.spot = spot;
 
     public void DisableShadows()
     {
