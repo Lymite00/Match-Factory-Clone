@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDatas:
+  - itemPrefab: {fileID: 4767906758571725421, guid: 882bdfa4968fa35459ddad29a0aab2a3, type: 3}
+    isGoal: 1
+    amount: 15
   - itemPrefab: {fileID: 4767906758571725421, guid: e7c4651f3f53f2e4c91206ad67c16060, type: 3}
     isGoal: 1
     amount: 42
@@ -242,9 +245,6 @@ MonoBehaviour:
   - itemPrefab: {fileID: 4767906758571725421, guid: 106aa4771b0fc7744a645109119e6b70, type: 3}
     isGoal: 0
     amount: 42
-  - itemPrefab: {fileID: 4767906758571725421, guid: 882bdfa4968fa35459ddad29a0aab2a3, type: 3}
-    isGoal: 1
-    amount: 15
   spawnZone: {fileID: 7657577647966280126}
   seed: 2
 --- !u!65 &7657577647966280126

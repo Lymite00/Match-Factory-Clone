@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 414319121279808665}
   - component: {fileID: 1971935188218741286}
   - component: {fileID: 7472240596245456744}
+  - component: {fileID: 5029914506452079386}
   m_Layer: 0
   m_Name: GoalCard
   m_TagString: Untagged
@@ -151,6 +152,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountText: {fileID: 7307177290321035103}
   iconImage: {fileID: 1637667013844176989}
+  checkMark: {fileID: 1493332568469391586}
+  backFace: {fileID: 5677101597129313198}
+  animator: {fileID: 5029914506452079386}
+--- !u!95 &5029914506452079386
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162617980327523707}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d230d08e36cc1db43bb531dc58815967, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5677101597129313198
 GameObject:
   m_ObjectHideFlags: 0
