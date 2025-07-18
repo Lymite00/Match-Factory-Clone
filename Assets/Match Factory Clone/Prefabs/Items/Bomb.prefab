@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4014637950851581008}
   - component: {fileID: 4767906758571725421}
   m_Layer: 0
-  m_Name: Item_1
+  m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbaf4d6519a7674ba88d9506adecfad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 0
+  itemName: 3
+  icon: {fileID: 21300000, guid: f7698c7d0d4954c4f9df7332ad1e8a55, type: 3}
   _renderer: {fileID: 1686514754793518544}
   _collider: {fileID: 0}
 --- !u!1 &8877227701681867197
@@ -87,7 +88,7 @@ GameObject:
   - component: {fileID: 4593390744447497323}
   - component: {fileID: 9221312687279660523}
   - component: {fileID: 1686514754793518544}
-  - component: {fileID: 4396977539722717102}
+  - component: {fileID: 1011635014925015831}
   m_Layer: 0
   m_Name: Renderer
   m_TagString: Untagged
@@ -104,8 +105,8 @@ Transform:
   m_GameObject: {fileID: 8877227701681867197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0.342, z: -0}
+  m_LocalScale: {x: 0.34561855, y: 0.34561855, z: 0.34561855}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 534930411550391777}
@@ -117,7 +118,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8877227701681867197}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -849867405023671905, guid: b69ab7dc4a09f094885bf950a65c44c3, type: 3}
 --- !u!23 &1686514754793518544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e53888a6f313594db18fe69e1256e84, type: 2}
+  - {fileID: 2100000, guid: abf9a89802c15af4d9843a5ad827cdb1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,7 +164,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4396977539722717102
+--- !u!135 &1011635014925015831
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,5 +183,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.9794189
+  m_Center: {x: 0, y: 0.0062207286, z: -0.0065691797}

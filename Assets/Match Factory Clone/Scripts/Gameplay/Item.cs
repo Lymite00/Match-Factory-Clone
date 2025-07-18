@@ -10,6 +10,9 @@ public class Item : MonoBehaviour
     public EItemName ItemName => itemName;
     private ItemSpot spot;
     public ItemSpot Spot => spot;
+
+    [SerializeField] private Sprite icon;
+    public Sprite Icon => icon;
     
     [Header("Elements")] 
     public Renderer _renderer;
@@ -44,5 +47,11 @@ public class Item : MonoBehaviour
     public void Deselect()
     {
         _renderer.materials = new Material[] { baseMaterial };
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, .02f);
     }
 }
