@@ -64,7 +64,8 @@ public class GoalManager : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("Level Complete");
+        GameManager.instance.SetGameState(EGameState.LEVELCOMPLETE);
+        //Debug.Log("Level Complete");
     }
 
     private void OnLevelSpawned(Level level)

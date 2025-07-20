@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : MonoBehaviour, IGameStateListener
 {
     [Header("Data")] 
     [SerializeField] private Level[] levels;
@@ -20,11 +20,6 @@ public class LevelManager : MonoBehaviour
         LoadData();
     }
 
-    private void Start()
-    {
-        SpawnLevel();
-    }
-
     private void SpawnLevel()
     {
         transform.Clear();
@@ -38,11 +33,24 @@ public class LevelManager : MonoBehaviour
 
     private void LoadData()
     {
-        levelIndex = PlayerPrefs.GetInt("Level");
+        levelIndex = PlayerPrefs.GetInt(levelKey);
     }
     
     private void SaveData()
     {
         PlayerPrefs.SetInt(levelKey, levelIndex);
+    }
+
+    public void GameStateChangedCallback(EGameState gameState)
+    {
+        if (gameState == EGameState.GAME)
+        {
+            SpawnLevel();
+        }
+        else if (gameState == EGameState.LEVELCOMPLETE)
+        {
+            levelIndex++;
+            SaveData();
+        }
     }
 }

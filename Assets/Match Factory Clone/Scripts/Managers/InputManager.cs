@@ -10,6 +10,14 @@ public class InputManager : MonoBehaviour
     private Item currentItem;
     private void Update()
     {
+        if (GameManager.instance.IsGame())
+        {
+            HandleControl();
+        }
+    }
+
+    private void HandleControl()
+    {
         if (Input.GetMouseButton(0))
             HandeDrag();
         else if (Input.GetMouseButtonUp(0))
