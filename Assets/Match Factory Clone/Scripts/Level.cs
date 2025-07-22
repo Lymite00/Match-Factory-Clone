@@ -10,4 +10,9 @@ public class Level : MonoBehaviour
     public int Duration => duration;
     
     public ItemLevelData[] GetGoals() => itemPlacer.GetGoals();
+
+    public Item[] GetItems()
+    {
+        return itemPlacer.GetItems();
+    }
 }

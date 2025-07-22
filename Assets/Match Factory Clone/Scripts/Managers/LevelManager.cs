@@ -3,12 +3,16 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour, IGameStateListener
 {
+    public static LevelManager instance;
+    
     [Header("Data")] 
     [SerializeField] private Level[] levels;
 
     private int levelIndex;
     private const string levelKey = "LevelReached";
 
+    public Item[] Items => currentLevel.GetItems();
+    
     [Header("Settings")] 
     private Level currentLevel;
 
@@ -17,6 +21,11 @@ public class LevelManager : MonoBehaviour, IGameStateListener
 
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+        
         LoadData();
     }
 
